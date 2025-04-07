@@ -8,6 +8,7 @@ import {
   TimelineTime,
   TimelineTitle,
 } from "flowbite-react";
+import type React from "react";
 import {
   HiBriefcase,
   HiCalendar,

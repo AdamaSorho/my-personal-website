@@ -12,22 +12,17 @@ import {
 } from "flowbite-react";
 import { HiAcademicCap, HiCalendar, HiLightBulb, HiCog } from "react-icons/hi";
 import { aboutData } from "../utils/data";
+import HeaderHeroSection from "../components/HeaderHeroSection";
 
 const AboutPage: React.FC = () => {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-800 to-indigo-900 py-20 text-white">
-        <div className="container mx-auto max-w-4xl px-4">
-          <h1 className="mb-6 text-center text-4xl font-bold md:text-5xl">
-            About Me
-          </h1>
-          <p className="mx-auto max-w-3xl text-center text-xl">
-            Get to know my professional journey, education, and what drives me
-            as a software engineer
-          </p>
-        </div>
-      </section>
+      <HeaderHeroSection
+        title="About Me"
+        subtitle="Get to know my professional journey, education, and what drives me
+            as a software engineer."
+      />
 
       {/* Professional Background */}
       <section className="bg-white py-16">

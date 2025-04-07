@@ -1,3 +1,7 @@
+import type { Education } from "../models/education.model";
+import type { Project } from "../models/project.model";
+import type { SkillCategory } from "../models/skill.model";
+
 export const experienceData = {
   jobs: [
     {
@@ -76,95 +80,165 @@ export const experienceData = {
   ],
 };
 
-export const projectsData = [
+export const projectsData: Project[] = [
   {
-    id: 1,
+    id: "landmark-recognition",
     title: "Landmark Recognition with CNN and Transfer Learning",
-    duration: "Jan 2025 - Present",
-    description:
-      "Built a CNN model using PyTorch to recognize global landmarks, then improved accuracy using transfer learning.",
+    timeline: "Jan 2025 - Jan 2025",
+    shortDescription:
+      "A computer vision project using deep learning to recognize global landmarks from images.",
+    problem:
+      "Accurately identifying and classifying landmarks from images is challenging due to variations in lighting, angle, and occlusions.",
+    approach:
+      "Built a CNN model from scratch and later improved it using ResNet-18 with transfer learning techniques to achieve higher accuracy.",
     technologies: [
       "PyTorch",
       "CNN",
       "Transfer Learning",
       "ResNet-18",
-      "Web Development",
+      "Hugging Face Spaces",
     ],
-    achievements: [
-      "Achieved 58% accuracy with custom CNN model",
+    results: [
+      "Built a CNN model from scratch using PyTorch, achieving 58% accuracy in recognizing 50 global landmarks",
       "Improved accuracy to 75% using ResNet-18 and Transfer Learning",
-      "Developed web app for model inference hosted on Hugging Face Spaces",
+      "Developed a web app for model inference, hosted on Hugging Face Spaces",
     ],
-    imageUrl: "/assets/images/landmark-project.jpg", // You'll need a relevant image
-    projectUrl: "#", // Replace with actual URL when available
+    demoLink: "#",
+    repoLink: "#",
+    imageUrl:
+      "https://placehold.co/600x400/3b82f6/ffffff?text=Landmark+Recognition",
   },
   {
-    id: 2,
+    id: "breast-cancer-classification",
     title: "Breast Cancer Classification using Kaggle Dataset",
-    duration: "Jan 2025 - Present",
-    description:
-      "Developed a classification model to assist with breast cancer diagnosis using machine learning techniques.",
+    timeline: "Jan 2025 - Jan 2025",
+    shortDescription:
+      "An ML project focused on accurate classification of breast cancer cases with an emphasis on model interpretability.",
+    problem:
+      "Creating reliable and interpretable classification models for sensitive healthcare applications like cancer detection.",
+    approach:
+      "Used Scikit-learn for data preprocessing and developed various classification models with a focus on interpretability.",
     technologies: [
       "Scikit-learn",
-      "Classification",
+      "Python",
+      "Classification Algorithms",
       "Healthcare ML",
-      "Data Processing",
+      "Data Preprocessing",
     ],
-    achievements: [
-      "Preprocessed complex medical datasets",
-      "Developed interpretable classification model",
-      "Optimized model performance for healthcare applications",
+    results: [
+      "Utilized Scikit-learn to preprocess datasets and develop a classification model",
+      "Focused on interpretability and improving model performance for healthcare applications",
     ],
-    imageUrl: "/assets/images/healthcare-project.jpg", // You'll need a relevant image
-    projectUrl: "#", // Replace with actual URL when available
+    demoLink: "#",
+    repoLink: "#",
+    imageUrl:
+      "https://placehold.co/600x400/3b82f6/ffffff?text=Cancer+Classification",
   },
 ];
 
-export const skillsData = {
-  programming: [
-    "Java",
-    "Python",
-    "JavaScript",
-    "SQL (PostgreSQL, MySQL)",
-    "NoSQL (MongoDB)",
-  ],
-  machineLearning: [
-    "Scikit-learn",
-    "PyTorch",
-    "Transfer Learning",
-    "AI Debugging",
-  ],
-  cloudDevOps: [
-    "AWS (S3, EC2, Lambda, EKS)",
-    "Docker",
-    "Kubernetes",
-    "Terraform",
-    "Jenkins",
-  ],
-  softwareDevelopment: [
-    "Spring Boot",
-    "FastAPI",
-    "Microservices",
-    "REST APIs",
-    "Kafka",
-  ],
-  aiDataProcessing: [
-    "Model Training & Testing",
-    "Feature Engineering",
-    "Data Cleaning",
-  ],
-  debugging: ["Log Analysis", "API Debugging", "Issue Escalation"],
-  collaborationTools: ["Jira", "Confluence", "Git", "Agile/Scrum"],
-};
+export const skillsData: SkillCategory[] = [
+  {
+    id: "programming",
+    title: "Programming",
+    description: "Languages and frameworks I use daily",
+    skills: [
+      { name: "Java", level: 95 },
+      { name: "Python", level: 90 },
+      { name: "JavaScript", level: 85 },
+      { name: "SQL (PostgreSQL, MySQL)", level: 90 },
+      { name: "NoSQL (MongoDB)", level: 80 },
+    ],
+  },
+  {
+    id: "machine-learning",
+    title: "Machine Learning",
+    description: "Tools and techniques for AI development",
+    skills: [
+      { name: "Scikit-learn", level: 85 },
+      { name: "PyTorch", level: 80 },
+      { name: "Transfer Learning", level: 75 },
+      { name: "AI Debugging", level: 85 },
+    ],
+  },
+  {
+    id: "cloud-devops",
+    title: "Cloud & DevOps",
+    description: "Infrastructure and deployment expertise",
+    skills: [
+      { name: "AWS (S3, EC2, Lambda, EKS)", level: 90 },
+      { name: "Docker", level: 85 },
+      { name: "Kubernetes", level: 80 },
+      { name: "Terraform", level: 85 },
+      { name: "Jenkins", level: 80 },
+    ],
+  },
+  {
+    id: "software-development",
+    title: "Software Development",
+    description: "Frameworks and methodologies",
+    skills: [
+      { name: "Spring Boot", level: 95 },
+      { name: "FastAPI", level: 90 },
+      { name: "Microservices", level: 85 },
+      { name: "REST APIs", level: 95 },
+      { name: "Kafka", level: 80 },
+    ],
+  },
+  {
+    id: "ai-data",
+    title: "AI & Data Processing",
+    description: "Data engineering and model development",
+    skills: [
+      { name: "Model Training & Testing", level: 85 },
+      { name: "Feature Engineering", level: 80 },
+      { name: "Data Cleaning", level: 90 },
+    ],
+  },
+  {
+    id: "debugging-support",
+    title: "Debugging & Support",
+    description: "Troubleshooting and technical assistance",
+    skills: [
+      { name: "Log Analysis", level: 90 },
+      { name: "API Debugging", level: 85 },
+      { name: "Issue Escalation", level: 80 },
+    ],
+  },
+  {
+    id: "collaboration",
+    title: "Collaboration Tools",
+    description: "Team productivity and project management",
+    skills: [
+      { name: "Jira", level: 90 },
+      { name: "Confluence", level: 85 },
+      { name: "Git", level: 95 },
+      { name: "Agile/Scrum", level: 90 },
+    ],
+  },
+  {
+    id: "soft-skills",
+    title: "Soft Skills",
+    description: "Professional capabilities beyond technical expertise",
+    skills: [
+      { name: "Problem Solving", level: 95 },
+      { name: "Technical Leadership", level: 85 },
+      { name: "Communication", level: 90 },
+      { name: "Team Collaboration", level: 95 },
+      { name: "Time Management", level: 90 },
+    ],
+  },
+];
 
-export const educationData = [
+export const educationData: Education[] = [
   {
     institution: "University of the Cumberlands",
-    degree: "Master of Science in Artificial Intelligence",
+    degree: "Master of Science",
+    major: "Artificial Intelligence",
   },
   {
     institution: "Université Virtuelle de Côte d'Ivoire",
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Bachelor of Science",
+    major: "Computer Science",
   },
 ];
 
@@ -229,3 +303,26 @@ export const aboutData = {
     },
   ],
 };
+
+export const toolsData = [
+  "Spring Boot",
+  "FastAPI",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "PyTorch",
+  "Scikit-learn",
+  "Redis",
+  "Kafka",
+  "Elasticsearch",
+  "Terraform",
+  "Jenkins",
+  "MySQL",
+  "MongoDB",
+  "PostgreSQL",
+  "Keycloak",
+  "Git",
+  "Jira",
+  "Confluence",
+  "Hibernate",
+];

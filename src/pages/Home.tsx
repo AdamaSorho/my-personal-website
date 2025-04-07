@@ -3,7 +3,7 @@ import { Button, Progress } from "flowbite-react";
 import { FaJava, FaPython, FaDatabase, FaBrain } from "react-icons/fa";
 import { SiSpringboot, SiAmazon } from "react-icons/si";
 import ProjectCard from "../components/ProjectCard";
-import HeroSection from "../components/heroSection";
+import HeroSection from "../components/HeroSection";
 import { projectsData } from "../utils/data";
 
 const HomePage: React.FC = () => {
@@ -93,8 +93,8 @@ const HomePage: React.FC = () => {
             Featured Projects
           </h2>
           <div className="grid gap-8 md:grid-cols-2">
-            {projectsData.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {projectsData.map((project, index) => (
+              <ProjectCard key={index} project={project} />
             ))}
           </div>
           <div className="mt-12 text-center">

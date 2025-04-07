@@ -2,24 +2,18 @@ import React from "react";
 import { Timeline, Button } from "flowbite-react";
 import { experienceData } from "../utils/data";
 import ExperiencedCard from "../components/ExperiencedCard";
+import HeaderHeroSection from "../components/HeaderHeroSection";
 
 const ExperiencePage: React.FC = () => {
   // Helper function to get achievement icon
 
   return (
     <div className="bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-800 to-indigo-900 py-20 text-white">
-        <div className="container mx-auto max-w-4xl px-4">
-          <h1 className="mb-6 text-center text-4xl font-bold md:text-5xl">
-            Work Experience
-          </h1>
-          <p className="mx-auto max-w-3xl text-center text-xl">
-            My professional journey as a Software Engineer over the past 7+
-            years
-          </p>
-        </div>
-      </section>
+      {/* Header */}
+      <HeaderHeroSection
+        title="Work Experience"
+        subtitle="My professional journey as a Software Engineer over the past 7+ years"
+      />
 
       {/* Experience Timeline */}
       <section className="bg-white py-16">

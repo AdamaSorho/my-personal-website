@@ -4,6 +4,9 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
 import ExperiencePage from "./pages/Experience";
+import ProjectsPage from "./pages/Projects";
+import SkillsPage from "./pages/Skills";
+import ContactPage from "./pages/Contact";
 
 function App() {
   // User information from resume
@@ -27,6 +30,9 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/experience" element={<ExperiencePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
