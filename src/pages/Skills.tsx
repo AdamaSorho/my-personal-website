@@ -1,8 +1,14 @@
 import React from "react";
-import { educationData, skillsData, toolsData } from "../utils/data";
+import {
+  certificationsData,
+  educationData,
+  skillsData,
+  toolsData,
+} from "../utils/data";
 import HeaderHeroSection from "../components/HeaderHeroSection";
 import SkillCard from "../components/SkillCard";
 import EducationCard from "../components/EducationCard";
+import CertificationCard from "../components/CertificationCard";
 
 const SkillsPage: React.FC = () => {
   return (
@@ -44,14 +50,21 @@ const SkillsPage: React.FC = () => {
         <h2 className="mb-6 text-center text-2xl font-bold">
           Education & Certifications
         </h2>
-
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {/* Education Card */}
+        {/* Education Card */}
+        <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2">
           {educationData.map((education, index) => (
             <EducationCard key={index} education={education} />
           ))}
+        </div>
 
-          {/*todo: Add any certifications here in similar cards */}
+        {/* Certifications */}
+        <h3 className="mb-4 text-center text-xl font-bold">
+          Professional Certifications
+        </h3>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {certificationsData.map((cert, index) => (
+            <CertificationCard index={index} cert={cert} />
+          ))}
         </div>
       </div>
 

@@ -1,3 +1,4 @@
+import type { Certification } from "../models/certification.model";
 import type { Education } from "../models/education.model";
 import type { Project } from "../models/project.model";
 import type { SkillCategory } from "../models/skill.model";
@@ -268,18 +269,6 @@ export const aboutData = {
         "Focused on software engineering principles, data structures, algorithms, and foundational programming concepts. Graduated with honors for outstanding academic performance.",
     },
   ],
-  certifications: [
-    {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: 2022,
-    },
-    {
-      name: "Professional Scrum Master I (PSM I)",
-      issuer: "Scrum.org",
-      year: 2021,
-    },
-  ],
   workPhilosophy: [
     {
       title: "Technical Excellence",
@@ -325,4 +314,65 @@ export const toolsData = [
   "Jira",
   "Confluence",
   "Hibernate",
+];
+
+export const certificationsData: Certification[] = [
+  {
+    name: "AWS Machine Learning Fundamentals",
+    issuer: "Udacity",
+    year: 2024,
+    credentialUrl:
+      "https://www.udacity.com/certificate/e/c105f82a-f6c0-11ee-afee-2b1ffe2a2586",
+    skills: [
+      "TensorFlow",
+      "Machine Learning",
+      "Deep Learning",
+      "Neural Networks",
+    ],
+  },
+  {
+    name: "AWS & AI Programming with Python",
+    issuer: "Udacity",
+    year: 2023,
+    credentialUrl:
+      "https://www.udacity.com/certificate/e/15dc3992-0ae8-11ee-8fe9-fb523df6ed53",
+  },
+  {
+    name: "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+    issuer: "Coursera",
+    year: 2021,
+    credentialUrl:
+      "https://www.coursera.org/account/accomplishments/verify/2SZHVLUMVJB7",
+    skills: [
+      "Algorithms",
+      "Mathematical Optimization",
+      "Machine Learning",
+      "Artificial Neural Networks",
+      "Deep Learning",
+      "Tensorflow",
+      "Mathematical Theory & Analysis",
+      "Applied Machine Learning",
+      "Machine Learning Algorithms",
+    ],
+  },
+  {
+    name: "Neural Networks and Deep Learning",
+    issuer: "Udacity",
+    year: 2020,
+    credentialUrl:
+      "https://www.coursera.org/account/accomplishments/verify/NYLYS4RHECDM",
+    skills: [
+      "Artificial Neural Network",
+      "Computer Programming",
+      "Mathematics",
+      "Calculus",
+      "Machine Learning",
+      "Network Architecture",
+      "Artificial Neural Networks",
+      "Deep Learning",
+      "Neural Network Architecture",
+      "Network Model",
+      "Regression",
+    ],
+  },
 ];

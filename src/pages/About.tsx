@@ -10,11 +10,12 @@ import {
   TimelineTitle,
   TimelineBody,
 } from "flowbite-react";
-import { HiAcademicCap, HiCalendar, HiLightBulb, HiCog } from "react-icons/hi";
-import { aboutData } from "../utils/data";
+import { HiAcademicCap, HiCalendar, HiLightBulb } from "react-icons/hi";
+import { aboutData, certificationsData } from "../utils/data";
 import HeaderHeroSection from "../components/HeaderHeroSection";
 import { Link } from "react-router-dom";
 import CallToAction from "../components/CallToAction";
+import CertificationCard from "../components/CertificationCard";
 
 const AboutPage: React.FC = () => {
   return (
@@ -82,26 +83,12 @@ const AboutPage: React.FC = () => {
           </Timeline>
 
           {/* Certifications */}
-          <h3 className="mt-12 mb-6 text-2xl font-semibold text-gray-800">
+          <h3 className="mt-12 mb-6 text-center text-2xl font-semibold text-gray-800">
             Certifications
           </h3>
           <div className="grid gap-6 md:grid-cols-2">
-            {aboutData.certifications.map((cert, index) => (
-              <Card key={index} className="transition-shadow hover:shadow-md">
-                <div className="flex items-start">
-                  <div className="mr-4 text-blue-600">
-                    <HiCog className="h-10 w-10" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-gray-800">
-                      {cert.name}
-                    </h4>
-                    <p className="text-gray-600">
-                      {cert.issuer} · {cert.year}
-                    </p>
-                  </div>
-                </div>
-              </Card>
+            {certificationsData.map((cert, index) => (
+              <CertificationCard index={index} cert={cert} />
             ))}
           </div>
         </div>
