@@ -13,9 +13,10 @@ import { Link } from "react-router-dom";
 interface HeaderProps {
   name: string;
   avatarUrl?: string;
+  email?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ name, avatarUrl }) => {
+const Header: React.FC<HeaderProps> = ({ name, avatarUrl, email }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -85,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ name, avatarUrl }) => {
         <div className="ml-auto hidden md:flex md:items-center">
           <Button
             as={Link}
-            to={"/contact"}
+            to={`mailto:${email}`}
             className="rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 font-medium text-white hover:bg-gradient-to-bl focus:ring-blue-300 dark:focus:ring-blue-800"
           >
             Contact Me

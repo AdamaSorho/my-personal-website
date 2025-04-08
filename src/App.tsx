@@ -16,14 +16,17 @@ function App() {
     phone: "641-233-9473",
     linkedinUrl: "https://www.linkedin.com/in/adamasorho/",
     location: "Austin, Texas",
-    // If you have an avatar image, add the URL here
     avatarUrl: "images/adama.png", // Optional
   };
 
   return (
     <Router>
       <div className="flex min-h-screen flex-col">
-        <Header name={userInfo.name} avatarUrl={userInfo.avatarUrl} />
+        <Header
+          name={userInfo.name}
+          avatarUrl={userInfo.avatarUrl}
+          email={userInfo.email}
+        />
 
         <main className="flex-grow">
           <Routes>

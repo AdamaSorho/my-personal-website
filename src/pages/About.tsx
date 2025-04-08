@@ -14,6 +14,7 @@ import { HiAcademicCap, HiCalendar, HiLightBulb, HiCog } from "react-icons/hi";
 import { aboutData } from "../utils/data";
 import HeaderHeroSection from "../components/HeaderHeroSection";
 import { Link } from "react-router-dom";
+import CallToAction from "../components/CallToAction";
 
 const AboutPage: React.FC = () => {
   return (
@@ -133,30 +134,11 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Call To Action */}
-      <section className="bg-gradient-to-r from-indigo-600 to-blue-500 py-16 text-white">
-        <div className="container mx-auto max-w-4xl px-4 text-center">
-          <h2 className="mb-6 text-3xl font-bold">
-            Interested in Working Together?
-          </h2>
-          <p className="mb-8 text-xl">
-            I'm always open to discussing new projects, opportunities, and
-            collaborations.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Button
-              as={Link}
-              to="/contact"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:bg-gradient-to-l focus:ring-purple-200 dark:focus:ring-purple-800"
-              size="lg"
-            >
-              Contact Me
-            </Button>
-            <Button as={Link} to="/projects" color="light" size="lg">
-              View My Projects
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CallToAction
+        title="Interested in Working Together?"
+        subtitle="I'm always open to discussing new projects, opportunities, and
+          collaborations."
+      />
     </div>
   );
 };

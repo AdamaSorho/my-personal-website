@@ -3,7 +3,7 @@ import { Timeline, Button } from "flowbite-react";
 import { experienceData } from "../utils/data";
 import ExperiencedCard from "../components/ExperiencedCard";
 import HeaderHeroSection from "../components/HeaderHeroSection";
-import { Link } from "react-router-dom";
+import CallToAction from "../components/CallToAction";
 
 const ExperiencePage: React.FC = () => {
   // Helper function to get achievement icon
@@ -46,29 +46,10 @@ const ExperiencePage: React.FC = () => {
       </section>
 
       {/* Call To Action */}
-      <section className="bg-gradient-to-r from-indigo-600 to-blue-500 py-16 text-white">
-        <div className="container mx-auto max-w-4xl px-4 text-center">
-          <h2 className="mb-6 text-3xl font-bold">
-            Interested in My Experience?
-          </h2>
-          <p className="mb-8 text-xl">
-            Let's discuss how my background can help with your next project.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Button
-              as={Link}
-              to={"/contact"}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:bg-gradient-to-l focus:ring-purple-200 dark:focus:ring-purple-800"
-              size="lg"
-            >
-              Contact Me
-            </Button>
-            <Button as={Link} to={"/projects"} color="light" size="lg">
-              View My Projects
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CallToAction
+        title="Interested in My Experience?"
+        subtitle="Let's discuss how my background can help with your next project."
+      />
     </div>
   );
 };
