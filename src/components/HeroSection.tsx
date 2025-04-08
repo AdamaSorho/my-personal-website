@@ -1,6 +1,7 @@
 import { Button } from "flowbite-react";
 import type React from "react";
 import { FaCode } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 interface HeroSectionProps {
   name: string;
@@ -21,12 +22,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ name, title }) => {
             </p>
             <div className="flex justify-center gap-4 md:justify-start">
               <Button
+                as={Link}
+                to={"/projects"}
                 className="bg-gradient-to-br from-purple-600 to-blue-500 text-white hover:bg-gradient-to-bl focus:ring-blue-300 dark:focus:ring-blue-800"
                 size="lg"
               >
                 View My Work
               </Button>
-              <Button color="light" size="lg">
+              <Button as={Link} to={"/contact"} color="light" size="lg">
                 Contact Me
               </Button>
             </div>

@@ -13,6 +13,7 @@ import {
 import { HiAcademicCap, HiCalendar, HiLightBulb, HiCog } from "react-icons/hi";
 import { aboutData } from "../utils/data";
 import HeaderHeroSection from "../components/HeaderHeroSection";
+import { Link } from "react-router-dom";
 
 const AboutPage: React.FC = () => {
   return (
@@ -42,7 +43,7 @@ const AboutPage: React.FC = () => {
           </div>
 
           <div className="mt-8 flex justify-center">
-            <Button href="/experience" color="blue">
+            <Button as={Link} to="/experience" color="blue">
               View My Experience Timeline
             </Button>
           </div>
@@ -143,12 +144,14 @@ const AboutPage: React.FC = () => {
           </p>
           <div className="flex justify-center gap-4">
             <Button
+              as={Link}
+              to="/contact"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:bg-gradient-to-l focus:ring-purple-200 dark:focus:ring-purple-800"
               size="lg"
             >
               Contact Me
             </Button>
-            <Button color="light" size="lg">
+            <Button as={Link} to="/projects" color="light" size="lg">
               View My Projects
             </Button>
           </div>

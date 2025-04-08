@@ -3,6 +3,7 @@ import { Button } from "flowbite-react";
 import HeaderHeroSection from "../components/HeaderHeroSection";
 import { projectsData } from "../utils/data";
 import ProjectCard from "../components/ProjectCard";
+import { Link } from "react-router-dom";
 
 const ProjectsPage: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ const ProjectsPage: React.FC = () => {
           I'm always open to discussing new projects, creative ideas, or
           opportunities to be part of your vision.
         </p>
-        <Button href="/contact" size="lg">
+        <Button as={Link} to="/contact" size="lg">
           Get In Touch
         </Button>
       </div>

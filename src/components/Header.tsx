@@ -31,10 +31,10 @@ const Header: React.FC<HeaderProps> = ({ name, avatarUrl }) => {
               img={avatarUrl}
               alt={`${name}'s profile`}
               rounded
-              className="mr-3"
+              className="mr-5"
             />
           )}
-          <span className="self-center text-2xl font-semibold whitespace-nowrap">
+          <span className="mr-5 self-center text-2xl font-semibold whitespace-nowrap">
             {name}
           </span>
         </NavbarBrand>

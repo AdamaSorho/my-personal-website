@@ -5,6 +5,7 @@ import { SiSpringboot, SiAmazon } from "react-icons/si";
 import ProjectCard from "../components/ProjectCard";
 import HeroSection from "../components/HeroSection";
 import { projectsData } from "../utils/data";
+import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   // Resume data
@@ -14,6 +15,7 @@ const HomePage: React.FC = () => {
     summary:
       "Results-driven Software Engineer with 7+ years of experience in designing and implementing scalable solutions. Strong expertise in Java, Python, Spring Boot, FastAPI, and cloud technologies. Solid understanding of machine learning principles, AI implementation, and debugging techniques.",
     yearsExperience: 7,
+    email: "adamasorho36@gmail.com",
     skills: [
       { name: "Java", icon: <FaJava className="h-6 w-6" />, level: 90 },
       { name: "Python", icon: <FaPython className="h-6 w-6" />, level: 85 },
@@ -46,7 +48,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="mb-8 text-3xl font-bold text-gray-800">About Me</h2>
           <p className="mb-8 text-lg text-gray-600">{userData.summary}</p>
-          <Button href="/about" color="light" className="mt-4">
+          <Button as={Link} to="/about" color="light" className="mt-4">
             Learn More About Me
           </Button>
         </div>
@@ -79,7 +81,7 @@ const HomePage: React.FC = () => {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Button href="/skills" color="light">
+            <Button as={Link} to="/skills" color="light">
               View All Skills
             </Button>
           </div>
@@ -98,7 +100,7 @@ const HomePage: React.FC = () => {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Button href="/projects" color="light">
+            <Button as={Link} to="/projects" color="light">
               View All Projects
             </Button>
           </div>
@@ -114,6 +116,8 @@ const HomePage: React.FC = () => {
             discuss how we can work together.
           </p>
           <Button
+            as={Link}
+            to={`mailto:${userData.email}`}
             className="bg-gradient-to-br from-purple-600 to-blue-500 text-white hover:bg-gradient-to-bl focus:ring-blue-300 dark:focus:ring-blue-800"
             size="lg"
           >

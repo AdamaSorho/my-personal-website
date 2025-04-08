@@ -17,7 +17,7 @@ function App() {
     linkedinUrl: "https://www.linkedin.com/in/adamasorho/",
     location: "Austin, Texas",
     // If you have an avatar image, add the URL here
-    avatarUrl: "", // Optional
+    avatarUrl: "images/adama.png", // Optional
   };
 
   return (
