@@ -8,6 +8,7 @@ import {
   NavbarLink,
 } from "flowbite-react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   name: string;
@@ -55,18 +56,38 @@ const Header: React.FC<HeaderProps> = ({ name, avatarUrl }) => {
         </div>
 
         <NavbarCollapse id="navbar-menu" className="md:block">
-          <NavbarLink href="/" active>
+          <NavbarLink href="/" active={location.pathname === "/"}>
             Home
           </NavbarLink>
-          <NavbarLink href="/about">About</NavbarLink>
-          <NavbarLink href="/experience">Experience</NavbarLink>
-          <NavbarLink href="/projects">Projects</NavbarLink>
-          <NavbarLink href="/skills">Skills</NavbarLink>
-          <NavbarLink href="/contact">Contact</NavbarLink>
+          <NavbarLink href="/about" active={location.pathname === "/about"}>
+            About
+          </NavbarLink>
+          <NavbarLink
+            href="/experience"
+            active={location.pathname === "/experience"}
+          >
+            Experience
+          </NavbarLink>
+          <NavbarLink
+            href="/projects"
+            active={location.pathname === "/projects"}
+          >
+            Projects
+          </NavbarLink>
+          <NavbarLink href="/skills" active={location.pathname === "/skills"}>
+            Skills
+          </NavbarLink>
+          <NavbarLink href="/contact" active={location.pathname === "/contact"}>
+            Contact
+          </NavbarLink>
         </NavbarCollapse>
 
         <div className="ml-auto hidden md:flex md:items-center">
-          <Button className="rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 font-medium text-white hover:bg-gradient-to-bl focus:ring-blue-300 dark:focus:ring-blue-800">
+          <Button
+            as={Link}
+            to={"/contact"}
+            className="rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 font-medium text-white hover:bg-gradient-to-bl focus:ring-blue-300 dark:focus:ring-blue-800"
+          >
             Contact Me
           </Button>
         </div>
