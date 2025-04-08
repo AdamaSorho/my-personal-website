@@ -58,8 +58,8 @@ const SkillsPage: React.FC = () => {
         </div>
 
         {/* Certifications */}
-        <h3 className="mb-4 text-center text-xl font-bold">
-          Professional Certifications
+        <h3 className="mb-4 text-center text-2xl font-bold">
+          Certifications & License
         </h3>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {certificationsData.map((cert, index) => (

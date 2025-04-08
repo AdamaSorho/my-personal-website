@@ -104,8 +104,10 @@ export const projectsData: Project[] = [
       "Improved accuracy to 75% using ResNet-18 and Transfer Learning",
       "Developed a web app for model inference, hosted on Hugging Face Spaces",
     ],
-    demoLink: "#",
-    repoLink: "#",
+    demoLink:
+      "https://huggingface.co/spaces/AdamaSorho/landmarks-classification-app",
+    repoLink:
+      "https://huggingface.co/spaces/AdamaSorho/landmarks-classification-app/tree/main",
     imageUrl:
       "https://placehold.co/600x400/3b82f6/ffffff?text=Landmark+Recognition",
   },
@@ -130,8 +132,9 @@ export const projectsData: Project[] = [
       "Utilized Scikit-learn to preprocess datasets and develop a classification model",
       "Focused on interpretability and improving model performance for healthcare applications",
     ],
-    demoLink: "#",
-    repoLink: "#",
+    demoLink:
+      "https://www.kaggle.com/code/adamasorho/breast-cancer-notebook-95-accuracy",
+    repoLink: "",
     imageUrl:
       "https://placehold.co/600x400/3b82f6/ffffff?text=Cancer+Classification",
   },
@@ -257,14 +260,14 @@ export const aboutData = {
     {
       degree: "Master of Science in Artificial Intelligence",
       institution: "University of the Cumberlands",
-      period: "2022 - 2024",
+      period: "2024 - Present",
       description:
-        "Specialized in machine learning techniques, neural networks, and AI system development. Applied theoretical knowledge to practical projects including CNN-based landmark recognition and medical image classification.",
+        "Specialized in machine learning techniques, neural networks, and AI system development in healthcare. Applied theoretical knowledge to practical projects including CNN-based landmark recognition and medical image classification.",
     },
     {
       degree: "Bachelor of Science in Computer Science",
       institution: "Université Virtuelle de Côte d'Ivoire",
-      period: "2013 - 2017",
+      period: "2015 - 2018",
       description:
         "Focused on software engineering principles, data structures, algorithms, and foundational programming concepts. Graduated with honors for outstanding academic performance.",
     },
@@ -300,6 +303,7 @@ export const toolsData = [
   "Docker",
   "Kubernetes",
   "PyTorch",
+  "TensorFlow",
   "Scikit-learn",
   "Redis",
   "Kafka",
@@ -324,10 +328,13 @@ export const certificationsData: Certification[] = [
     credentialUrl:
       "https://www.udacity.com/certificate/e/c105f82a-f6c0-11ee-afee-2b1ffe2a2586",
     skills: [
-      "TensorFlow",
+      "PyTorch",
       "Machine Learning",
       "Deep Learning",
       "Neural Networks",
+      "Convolutional Neural Networks (CNN)",
+      "Transfer Learning",
+      "SageMaker",
     ],
   },
   {
@@ -336,6 +343,14 @@ export const certificationsData: Certification[] = [
     year: 2023,
     credentialUrl:
       "https://www.udacity.com/certificate/e/15dc3992-0ae8-11ee-8fe9-fb523df6ed53",
+    skills: [
+      "PyTorch",
+      "Machine Learning",
+      "Numpy",
+      "Python",
+      "Matplotlib",
+      "pandas",
+    ],
   },
   {
     name: "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
@@ -357,7 +372,7 @@ export const certificationsData: Certification[] = [
   },
   {
     name: "Neural Networks and Deep Learning",
-    issuer: "Udacity",
+    issuer: "Coursera",
     year: 2020,
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/verify/NYLYS4RHECDM",

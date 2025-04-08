@@ -37,7 +37,8 @@ const ExperiencePage: React.FC = () => {
             Throughout my career, I've developed expertise in various
             technologies and methodologies. From backend development with Java
             and Spring Boot to cloud infrastructure with AWS, and machine
-            learning with Python, I bring a diverse skill set to every project.
+            learning with Python, PyTorch, and TensorFlow, I bring a diverse
+            skill set to every project.
           </p>
           <Button href="/skills" color="blue">
             Explore My Full Skill Set

@@ -108,12 +108,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ key, project }) => {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800"
-                      >
-                        {tech}
-                      </span>
+                      <SkillBadge key={index} tech={tech} index={index} />
                     ))}
                   </div>
                 </div>
