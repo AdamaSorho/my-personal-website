@@ -9,6 +9,7 @@ import HeaderHeroSection from "../components/HeaderHeroSection";
 import SkillCard from "../components/SkillCard";
 import EducationCard from "../components/EducationCard";
 import CertificationCard from "../components/CertificationCard";
+import { NavLink } from "react-router-dom";
 
 const SkillsPage: React.FC = () => {
   return (
@@ -77,12 +78,12 @@ const SkillsPage: React.FC = () => {
           I'm available for challenging projects that require expertise in
           software engineering, AI implementation, and cloud infrastructure.
         </p>
-        <a
-          href="/contact"
+        <NavLink
+          to="/contact"
           className="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
         >
           Get In Touch
-        </a>
+        </NavLink>
       </div>
     </div>
   );

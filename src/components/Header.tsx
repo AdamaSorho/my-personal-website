@@ -1,14 +1,7 @@
 import React, { useState } from "react";
-import {
-  Navbar,
-  Avatar,
-  Button,
-  NavbarBrand,
-  NavbarCollapse,
-  NavbarLink,
-} from "flowbite-react";
+import { Navbar, Avatar, Button, NavbarCollapse } from "flowbite-react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 interface HeaderProps {
   name: string;
@@ -23,22 +16,28 @@ const Header: React.FC<HeaderProps> = ({ name, avatarUrl, email }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Custom active class for NavLink
+  const activeClass =
+    "text-blue-700 bg-gray-100 md:bg-transparent md:text-blue-700";
+  const normalClass =
+    "text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700";
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <Navbar fluid className="mx-auto max-w-7xl px-4 py-2.5 lg:px-6">
-        <NavbarBrand href="/" className="flex items-center">
+        <NavLink to={"/"} className="mr-5 flex items-center">
           {avatarUrl && (
             <Avatar
               img={avatarUrl}
               alt={`${name}'s profile`}
               rounded
-              className="mr-5"
+              className="mr-3"
             />
           )}
-          <span className="mr-5 self-center text-2xl font-semibold whitespace-nowrap">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap">
             {name}
           </span>
-        </NavbarBrand>
+        </NavLink>
 
         <div className="flex items-center md:hidden">
           <button
@@ -57,37 +56,50 @@ const Header: React.FC<HeaderProps> = ({ name, avatarUrl, email }) => {
         </div>
 
         <NavbarCollapse id="navbar-menu" className="md:block">
-          <NavbarLink href="/" active={location.pathname === "/"}>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? activeClass : normalClass)}
+            end
+          >
             Home
-          </NavbarLink>
-          <NavbarLink href="/about" active={location.pathname === "/about"}>
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? activeClass : normalClass)}
+          >
             About
-          </NavbarLink>
-          <NavbarLink
-            href="/experience"
-            active={location.pathname === "/experience"}
+          </NavLink>
+          <NavLink
+            to="/experience"
+            className={({ isActive }) => (isActive ? activeClass : normalClass)}
           >
             Experience
-          </NavbarLink>
-          <NavbarLink
-            href="/projects"
-            active={location.pathname === "/projects"}
+          </NavLink>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) => (isActive ? activeClass : normalClass)}
           >
             Projects
-          </NavbarLink>
-          <NavbarLink href="/skills" active={location.pathname === "/skills"}>
+          </NavLink>
+          <NavLink
+            to="/skills"
+            className={({ isActive }) => (isActive ? activeClass : normalClass)}
+          >
             Skills
-          </NavbarLink>
-          <NavbarLink href="/contact" active={location.pathname === "/contact"}>
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? activeClass : normalClass)}
+          >
             Contact
-          </NavbarLink>
+          </NavLink>
         </NavbarCollapse>
 
         <div className="ml-auto hidden md:flex md:items-center">
           <Button
             as={Link}
             to={`mailto:${email}`}
-            className="rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 font-medium text-white hover:bg-gradient-to-bl focus:ring-blue-300 dark:focus:ring-blue-800"
+            className="dark:focus:ring-blue-800> rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 font-medium text-white hover:bg-gradient-to-bl focus:ring-blue-300"
           >
             Contact Me
           </Button>

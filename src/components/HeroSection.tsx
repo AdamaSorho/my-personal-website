@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 interface HeroSectionProps {
   name: string;
   title: string;
+  email: string;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ name, title }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ name, title, email }) => {
   return (
     <section className="bg-gradient-to-r from-blue-700 to-indigo-900 py-20 text-white">
       <div className="container mx-auto max-w-6xl px-4">
@@ -29,7 +30,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ name, title }) => {
               >
                 View My Work
               </Button>
-              <Button as={Link} to={"/contact"} color="light" size="lg">
+              <Button as={Link} to={`mailto:${email}`} color="light" size="lg">
                 Contact Me
               </Button>
             </div>

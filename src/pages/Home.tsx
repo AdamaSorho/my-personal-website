@@ -41,7 +41,11 @@ const HomePage: React.FC = () => {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <HeroSection name={userData.name} title={userData.title} />
+      <HeroSection
+        name={userData.name}
+        title={userData.title}
+        email={userData.email}
+      />
 
       {/* Brief About Me */}
       <section className="bg-white py-16">

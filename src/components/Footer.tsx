@@ -6,6 +6,7 @@ import {
   FooterTitle,
 } from "flowbite-react";
 import { BsLinkedin, BsEnvelope, BsTelephone } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 interface FooterProps {
   name: string;
@@ -29,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid w-full grid-cols-1 gap-8 px-6 py-8 md:grid-cols-3">
           <div>
-            <FooterTitle title={name} className="text-white" />
+            <FlowbiteFooter title={name} className="text-white" />
             <FooterLinkGroup col>
               <p className="text-gray-300">
                 Senior Software Engineer specializing in Java, Python, and AI/ML
@@ -44,12 +45,24 @@ const Footer: React.FC<FooterProps> = ({
           <div>
             <FooterTitle title="Quick Links" className="text-white" />
             <FooterLinkGroup col>
-              <FooterLink href="/">Home</FooterLink>
-              <FooterLink href="/about">About</FooterLink>
-              <FooterLink href="/experience">Experience</FooterLink>
-              <FooterLink href="/projects">Projects</FooterLink>
-              <FooterLink href="/skills">Skills</FooterLink>
-              <FooterLink href="/contact">Contact</FooterLink>
+              <Link to="/" className="text-gray-300 hover:text-white">
+                Home
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white">
+                About
+              </Link>
+              <Link to="/experience" className="text-gray-300 hover:text-white">
+                Experience
+              </Link>
+              <Link to="/projects" className="text-gray-300 hover:text-white">
+                Projects
+              </Link>
+              <Link to="/skills" className="text-gray-300 hover:text-white">
+                Skills
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white">
+                Contact
+              </Link>
             </FooterLinkGroup>
           </div>
 
