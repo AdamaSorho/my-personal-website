@@ -12,7 +12,7 @@
     "format:check": "prettier . --check",
     "postinstall": "flowbite-react patch",
     "deploy": "npm run build && gh-pages -d dist",
-    "homepage": "https://adamasorho.github.io/my-personal-website/"
+    "homepage": "https://adamasorho.com"
   },
   "dependencies": {
     "flowbite-react": "^0.11.0",
