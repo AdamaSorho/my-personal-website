@@ -1,6 +1,12 @@
-import React, { useState } from "react";
-import { Navbar, Avatar, Button, NavbarCollapse } from "flowbite-react";
-import { HiMenu, HiX } from "react-icons/hi";
+import React from "react";
+import {
+  Navbar,
+  Avatar,
+  Button,
+  NavbarCollapse,
+  NavbarToggle,
+} from "flowbite-react";
+// import { HiMenu, HiX } from "react-icons/hi";
 import { Link, NavLink } from "react-router-dom";
 
 interface HeaderProps {
@@ -10,11 +16,11 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ name, avatarUrl, email }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  // const toggleMenu = () => {
+  //   setIsMenuOpen(!isMenuOpen);
+  // };
 
   // Custom active class for NavLink
   const activeClass =
@@ -39,20 +45,8 @@ const Header: React.FC<HeaderProps> = ({ name, avatarUrl, email }) => {
           </span>
         </NavLink>
 
-        <div className="flex items-center md:hidden">
-          <button
-            onClick={toggleMenu}
-            className="ml-3 inline-flex items-center rounded-lg p-2 text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:outline-none"
-            aria-controls="navbar-menu"
-            aria-expanded={isMenuOpen}
-          >
-            <span className="sr-only">Open main menu</span>
-            {isMenuOpen ? (
-              <HiX className="h-6 w-6" />
-            ) : (
-              <HiMenu className="h-6 w-6" />
-            )}
-          </button>
+        <div className="flex md:order-2">
+          <NavbarToggle />
         </div>
 
         <NavbarCollapse id="navbar-menu" className="md:block">
