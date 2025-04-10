@@ -64,7 +64,7 @@ const ExperiencedCard: React.FC<ExperiencedCardProps> = ({ job, jobIndex }) => {
               Key Achievements
             </h3>
             <ul className="space-y-4">
-              {job.achievements.map((achievement, achievementIndex) => {
+              {job.achievements?.map((achievement, achievementIndex) => {
                 const Icon = getAchievementIcon(achievementIndex);
                 return (
                   <li key={achievementIndex} className="flex">
@@ -83,7 +83,7 @@ const ExperiencedCard: React.FC<ExperiencedCardProps> = ({ job, jobIndex }) => {
               Technologies Used
             </h3>
             <div className="flex flex-wrap gap-2">
-              {job.technologies.map((tech, techIndex) => (
+              {job.technologies?.map((tech, techIndex) => (
                 <Badge key={techIndex} color="info" className="text-xs">
                   {tech}
                 </Badge>
