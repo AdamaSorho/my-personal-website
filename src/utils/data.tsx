@@ -1,15 +1,39 @@
 import type { Certification } from "../models/certification.model";
 import type { Education } from "../models/education.model";
+import type { Experience } from "../models/experience.model";
 import type { Project } from "../models/project.model";
 import type { SkillCategory } from "../models/skill.model";
 
-export const experienceData = {
+export const experienceData: Experience = {
   jobs: [
+    {
+      title: "Founder & Machine Learning Engineer",
+      company: "Land Title Acquisition App",
+      period: "Jan 2025 - Present",
+      description:
+        "A self-initiated project focused on leveraging blockchain and AI to solve land title acquisition issues in West Africa.",
+      achievements: [
+        "Architecting a hybrid backend using Spring Boot for business logic and FastAPI for ML model inference and document processing.",
+        "Leading the development of a blockchain-enabled web platform to digitize and secure land title ownership records in Côte d’Ivoire.",
+        "Developing ML pipelines for document classification, fraud detection, and OCR/NLP-based extraction from scanned legal documents.",
+        "Designing the front-end with React, Tailwind CSS, and Flowbite to support multilingual access and mobile responsiveness.",
+      ],
+      technologies: [
+        "Java",
+        "Spring Boot",
+        "FastAPI",
+        "React",
+        "Tailwind CSS",
+        "Flowbite",
+        "Blockchain",
+        "Machine Learning",
+      ],
+    },
     {
       title: "Senior Software Engineer",
       company: "HireArt",
       period: "Feb 2024 - Apr 2024",
-      location: "Remote",
+      location: "On site",
       description:
         "Worked as a senior software engineer on a short-term contract, focused on maintaining high-quality code standards and developing RESTful APIs.",
       achievements: [
