@@ -19,16 +19,10 @@ import {
   HiLightningBolt,
   HiServer,
 } from "react-icons/hi";
+import type { Job } from "../models/experience.model";
 
 interface ExperiencedCardProps {
-  job: {
-    title: string;
-    company: string;
-    period: string;
-    description: string;
-    achievements: string[];
-    technologies: string[];
-  };
+  job: Job;
   jobIndex: number;
 }
 
