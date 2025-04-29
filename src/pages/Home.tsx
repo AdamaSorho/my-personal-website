@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
   // Resume data
   const userData = {
     name: "Adama Sorho",
-    title: "Software Engineer",
+    title: "Software Engineer & Machine Learning Engineer",
     summary:
       "Results-driven Software Engineer with 7+ years of experience in designing and implementing scalable solutions. Strong expertise in Java, Python, Spring Boot, FastAPI, and cloud technologies. Solid understanding of machine learning principles, AI implementation, and debugging techniques.",
     yearsExperience: 7,

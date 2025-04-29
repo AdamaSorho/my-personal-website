@@ -13,7 +13,7 @@ const ExperiencePage: React.FC = () => {
       {/* Header */}
       <HeaderHeroSection
         title="Work Experience"
-        subtitle="My professional journey as a Software Engineer over the past 7+ years"
+        subtitle="My professional journey as a Software Engineer & Machine Learning Engineer over the past 7 years"
       />
 
       {/* Experience Timeline */}
