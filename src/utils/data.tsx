@@ -7,57 +7,9 @@ import type { SkillCategory } from "../models/skill.model";
 export const experienceData: Experience = {
   jobs: [
     {
-      title: "Machine Learning Engineer",
-      company: "Kyss Technologies",
-      period: "Jun 2024 - Present",
-      description: "",
-      achievements: [
-        "Utilized statistical analysis and machine learning techniques to create predictive models that significantly enhanced data-driven business strategies.",
-        "Integrated a pre-trained CNN (ResNet, EfficientNet) to extract visual features, enabling AI-driven post recommendations with 85% precision.",
-        "Developed and deployed ML models for post-engagement prediction, optimizing content reach and scheduling. Engineered data pipelines for training NLP models, leveraging Python, TensorFlow, and Hugging Face Transformers.",
-        "Implemented an end-to-end MLOps pipeline using ZenML and MLflow, automating model training, deployment, and monitoring for AI-generated content, reducing model drift by 25%.",
-        "Conducted extensive research and applied the latest advancements in AI and machine learning, resulting in innovative solutions that kept the company at the forefront of technology trends.",
-        "Implemented rigorous testing protocols to evaluate model performance, using metrics such as accuracy, precision, recall, and F1 score to ensure the models met predefined objectives.",
-        "Utilized advanced machine learning techniques to identify trends in healthcare data and drive strategic decision- making, resulting in improved patient outcomes and reduced healthcare costs.",
-        "Utilized my expertise in MLOps to offer mentorship and guidance to team members on complex AI projects, fostering a culture of continuous learning and innovation.",
-      ],
-      technologies: [
-        "Python",
-        "PyTorch",
-        "FastAPI",
-        "React",
-        "TensorFlow",
-        "ZenML",
-        "MLflow",
-        "AWS",
-      ],
-    },
-    {
-      title: "Advanced Coder- AI trainer | Senior Software Engineer",
-      company: "HireArt",
-      period: "Feb 2024 - Apr 2024",
-      location: "On site",
-      description:
-        "Worked as a senior software engineer on a short-term contract, focused on maintaining high-quality code standards and developing RESTful APIs.",
-      achievements: [
-        "Maintained high code quality standards, achieving approximately 90% code coverage through detailed unit and integration tests executed under stringent deadlines.",
-        "Crafted a comprehensive array of RESTful APIs to support a wide range of CRUD operations.",
-        "Incorporated robust security measures, including authentication and role-based access control.",
-        "Developed with Java Spring Boot and MySQL, collaborating closely with a cross-functional team to ensure seamless integration and efficient workflow.",
-      ],
-      technologies: [
-        "Java",
-        "Spring Boot",
-        "MySQL",
-        "REST API",
-        "Unit Testing",
-        "Integration Testing",
-      ],
-    },
-    {
       title: "Senior Software Engineer",
       company: "UVCI",
-      period: "Oct 2019 - Oct 2023",
+      period: "Oct 2019 - Dec 2024",
       location: "Côte d'Ivoire",
       description:
         "Led the development of financial and library applications, implementing microservices architecture and cloud solutions to improve system performance and scalability.",
@@ -67,8 +19,8 @@ export const experienceData: Experience = {
         "Configured Spring Security and Keycloak for authentication, increasing user engagement by 30%.",
         "Used Elasticsearch to enhance search capabilities, improving query performance by 75%.",
         "Rebuilt a library system using InvenioRDM and implemented an API with FastAPI to upload over 10,000 publications.",
-        "Analyzed large datasets from CSV files, applying data validation and cleansing before ML model training.",
-        "Triaged support requests from engineers, investigated logs, debugged issues, and escalated complex cases.",
+        "Established CI/CD pipelines using Terraform, Jenkins, GitHub, and AWS, automating build and reducing deployment time from an average of 2 hours to 5 minutes.",
+        "Applied JUnit for unit testing and Mockito for BDD testing, achieving a 30% reduction in post-deployment defects.",
       ],
       technologies: [
         "Spring Boot",
@@ -76,10 +28,10 @@ export const experienceData: Experience = {
         "Redis",
         "AWS",
         "Terraform",
+        "Angular",
+        "React",
         "Jenkins",
         "Elasticsearch",
-        "FastAPI",
-        "ML",
         "Keycloak",
       ],
     },
@@ -94,7 +46,7 @@ export const experienceData: Experience = {
         "Enhanced an e-commerce application by adding new features and fixing backend issues in Java and Spring Boot, increasing customer satisfaction by 30%.",
         "Utilized Kafka to improve system scalability by 30%, reducing downtime from 7 to 5 hours/month.",
         "Applied Test-Driven Development (TDD) to ensure high-quality, bug-free software releases.",
-        "Implemented Redis caching, reducing data retrieval time from 500ms to 100ms.",
+        "Leveraged JUnit and Mockito for comprehensive testing, ensuring high coverage and reliability in the codebase.",
       ],
       technologies: [
         "Java",
@@ -180,23 +132,26 @@ export const skillsData: SkillCategory[] = [
       { name: "NoSQL (MongoDB)", level: 80 },
     ],
   },
-  {
-    id: "machine-learning",
-    title: "Machine Learning",
-    description: "Tools and techniques for AI development",
-    skills: [
-      { name: "Scikit-learn", level: 85 },
-      { name: "PyTorch", level: 80 },
-      { name: "Transfer Learning", level: 75 },
-      { name: "AI Debugging", level: 85 },
-    ],
-  },
+  // {
+  //   id: "machine-learning",
+  //   title: "Machine Learning",
+  //   description: "Tools and techniques for AI development",
+  //   skills: [
+  //     { name: "Scikit-learn", level: 85 },
+  //     { name: "PyTorch", level: 80 },
+  //     { name: "Transfer Learning", level: 75 },
+  //     { name: "AI Debugging", level: 85 },
+  //   ],
+  // },
   {
     id: "cloud-devops",
     title: "Cloud & DevOps",
     description: "Infrastructure and deployment expertise",
     skills: [
-      { name: "AWS (S3, EC2, Lambda, EKS)", level: 90 },
+      {
+        name: "AWS (S3, EC2, Lambda, EKS, RDS, EFS, ECS, CloudFront, Route53, CloudWatch)",
+        level: 90,
+      },
       { name: "Docker", level: 85 },
       { name: "Kubernetes", level: 80 },
       { name: "Terraform", level: 85 },
@@ -215,16 +170,16 @@ export const skillsData: SkillCategory[] = [
       { name: "Kafka", level: 80 },
     ],
   },
-  {
-    id: "ai-data",
-    title: "AI & Data Processing",
-    description: "Data engineering and model development",
-    skills: [
-      { name: "Model Training & Testing", level: 85 },
-      { name: "Feature Engineering", level: 80 },
-      { name: "Data Cleaning", level: 90 },
-    ],
-  },
+  // {
+  //   id: "ai-data",
+  //   title: "AI & Data Processing",
+  //   description: "Data engineering and model development",
+  //   skills: [
+  //     { name: "Model Training & Testing", level: 85 },
+  //     { name: "Feature Engineering", level: 80 },
+  //     { name: "Data Cleaning", level: 90 },
+  //   ],
+  // },
   {
     id: "debugging-support",
     title: "Debugging & Support",
@@ -277,17 +232,17 @@ export const aboutData = {
   name: "Adama Sorho",
   title: "Senior Software Engineer",
   summary:
-    "Results-driven Software Engineer with 7+ years of experience in designing and implementing scalable solutions. Strong expertise in Java, Python, Spring Boot, FastAPI, and cloud technologies. Solid understanding of machine learning principles, AI implementation, and debugging techniques. Passionate about AI support and troubleshooting complex ML model deployments.",
+    "Experienced Software Engineer with 7+ years of delivering scalable, high-performance backend solutions across finance, e-commerce, and government sectors. Skilled in Java, Spring Boot, AWS, and microservices architecture, I specialize in building robust APIs and automating deployments to enhance system efficiency. With a passion for clean code, agile collaboration, and continuous learning.",
   professionalBackground: [
     "I began my software engineering journey in 2017 at IMAKO, where I focused on Java and Spring Boot applications, honing my skills in backend development and architectural design.",
-    "At UVCI, I expanded my expertise to include cloud technologies, microservices, and machine learning applications, taking on increasingly complex projects and mentoring junior developers.",
-    "My recent roles have allowed me to specialize in AI model integration and deployment, combining my software engineering background with my growing passion for machine learning.",
+    "At UVCI, I expanded my expertise to include cloud technologies like AWS, and microservices, taking on increasingly complex projects and mentoring junior developers.",
+    "I am currently looking for a new challenge in the tech industry.",
   ],
   education: [
     {
       degree: "Master of Science in Artificial Intelligence",
       institution: "University of the Cumberlands",
-      period: "2024 - Present",
+      period: "2025 - Present",
       description:
         "Specialized in machine learning techniques, neural networks, and AI system development in healthcare. Applied theoretical knowledge to practical projects including CNN-based landmark recognition and medical image classification.",
     },

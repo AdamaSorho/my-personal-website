@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Progress } from "flowbite-react";
-import { FaJava, FaPython, FaDatabase, FaBrain } from "react-icons/fa";
+import { FaJava, FaPython, FaDatabase, FaReact } from "react-icons/fa";
 import { SiSpringboot, SiAmazon } from "react-icons/si";
 import ProjectCard from "../components/ProjectCard";
 import HeroSection from "../components/HeroSection";
@@ -11,9 +11,11 @@ const HomePage: React.FC = () => {
   // Resume data
   const userData = {
     name: "Adama Sorho",
-    title: "Software Engineer & Machine Learning Engineer",
+    title: "Software Engineer",
+    subtitle:
+      "Specializing in Java, Python, Spring Boot, React, AWS, and Angular with a passion for building scalable solutions",
     summary:
-      "Results-driven Software Engineer with 7+ years of experience in designing and implementing scalable solutions. Strong expertise in Java, Python, Spring Boot, FastAPI, and cloud technologies. Solid understanding of machine learning principles, AI implementation, and debugging techniques.",
+      "Experienced Software Engineer with 7+ years of hands-on experience in designing scalable, high-performance software solutions across finance, e-commerce, and government sectors. Proven expertise in developing RESTful APIs and microservices, optimizing database performance, and deploying cloud-native (AWS) applications. Strong proficiency in Java, Spring Boot, Angular, and cloud platforms, with a deep commitment to code quality and agile delivery.",
     yearsExperience: 7,
     email: "adamasorho36@gmail.com",
     skills: [
@@ -31,10 +33,15 @@ const HomePage: React.FC = () => {
         level: 85,
       },
       {
-        name: "Machine Learning",
-        icon: <FaBrain className="h-6 w-6" />,
-        level: 75,
+        name: "React",
+        icon: <FaReact className="h-6 w-6" />,
+        level: 85,
       },
+      // {
+      //   name: "Machine Learning",
+      //   icon: <FaBrain className="h-6 w-6" />,
+      //   level: 75,
+      // },
     ],
   };
 
@@ -44,6 +51,7 @@ const HomePage: React.FC = () => {
       <HeroSection
         name={userData.name}
         title={userData.title}
+        subtitle={userData.subtitle}
         email={userData.email}
       />
 

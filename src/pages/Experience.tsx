@@ -13,7 +13,7 @@ const ExperiencePage: React.FC = () => {
       {/* Header */}
       <HeaderHeroSection
         title="Work Experience"
-        subtitle="My professional journey as a Software Engineer & Machine Learning Engineer over the past 7 years"
+        subtitle="My professional journey as a Software Engineer."
       />
 
       {/* Experience Timeline */}
@@ -36,9 +36,8 @@ const ExperiencePage: React.FC = () => {
           <p className="mb-8 text-lg text-gray-600">
             Throughout my career, I've developed expertise in various
             technologies and methodologies. From backend development with Java
-            and Spring Boot to cloud infrastructure with AWS, and machine
-            learning with Python, PyTorch, and TensorFlow, I bring a diverse
-            skill set to every project.
+            and Spring Boot to cloud infrastructure with AWS. I've honed my
+            skills in Agile practices, code quality, and continuous learning.
           </p>
           <Button href="/skills" color="blue">
             Explore My Full Skill Set

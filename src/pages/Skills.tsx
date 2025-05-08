@@ -17,7 +17,7 @@ const SkillsPage: React.FC = () => {
       <HeaderHeroSection
         title="Skills & Expertise"
         subtitle="With over 7 years of experience, I've developed a comprehensive skill
-          set spanning software development, AI/ML, cloud technologies, and
+          set spanning software development, cloud technologies (AWS), and
           DevOps practices."
       />
 

@@ -6,10 +6,16 @@ import { Link } from "react-router-dom";
 interface HeroSectionProps {
   name: string;
   title: string;
+  subtitle: string;
   email: string;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ name, title, email }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({
+  name,
+  title,
+  subtitle,
+  email,
+}) => {
   return (
     <section className="bg-gradient-to-r from-blue-700 to-indigo-900 py-20 text-white">
       <div className="container mx-auto max-w-6xl px-4">
@@ -17,10 +23,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ name, title, email }) => {
           <div className="md:w-2/3">
             <h1 className="mb-4 text-4xl font-bold md:text-5xl">{name}</h1>
             <h2 className="mb-6 text-2xl font-light md:text-3xl">{title}</h2>
-            <p className="mb-8 text-xl">
-              Specializing in Java, Python, and AI/ML with a passion for
-              building scalable solutions
-            </p>
+            <p className="mb-8 text-xl">{subtitle}</p>
             <div className="flex justify-center gap-4 md:justify-start">
               <Button
                 as={Link}
