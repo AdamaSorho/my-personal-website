@@ -17,6 +17,7 @@ import {
   HiCode,
   HiDatabase,
   HiLightningBolt,
+  HiLocationMarker,
   HiServer,
 } from "react-icons/hi";
 import type { Job } from "../models/experience.model";
@@ -44,9 +45,17 @@ const ExperiencedCard: React.FC<ExperiencedCardProps> = ({ job, jobIndex }) => {
       <TimelinePoint icon={HiBriefcase} />
       <TimelineContent>
         <TimelineTime>
-          <div className="flex items-center text-gray-500">
-            <HiCalendar className="mr-2" />
-            {job.period}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-gray-500">
+            <span className="flex items-center">
+              <HiCalendar className="mr-2" />
+              {job.period}
+            </span>
+            {job.location && (
+              <span className="flex items-center">
+                <HiLocationMarker className="mr-2" />
+                {job.location}
+              </span>
+            )}
           </div>
         </TimelineTime>
         <TimelineTitle className="flex flex-wrap items-center justify-between">

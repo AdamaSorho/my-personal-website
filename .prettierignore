@@ -1,0 +1,14 @@
+# Dependencies and generated build output
+node_modules
+dist
+dist-ssr
+
+# Local/runtime state
+.omx/
+.flowbite-react/class-list.json
+
+# Logs and machine-local files
+logs
+*.log
+*.local
+.DS_Store

@@ -33,8 +33,8 @@ const Footer: React.FC<FooterProps> = ({
             <FlowbiteFooter title={name} className="text-white" />
             <FooterLinkGroup col>
               <p className="text-gray-300">
-                Senior Software Engineer specializing in Java, Python, and AI/ML
-                solutions
+                Software Engineer specializing in scalable backend systems,
+                cloud-native applications, and applied AI/ML solutions
               </p>
               {location && (
                 <p className="mt-2 text-gray-300">Based in {location}</p>

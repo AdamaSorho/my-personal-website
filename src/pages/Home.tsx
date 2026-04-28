@@ -1,7 +1,12 @@
 import React from "react";
 import { Button, Progress } from "flowbite-react";
-import { FaJava, FaPython, FaDatabase, FaReact } from "react-icons/fa";
-import { SiSpringboot, SiAmazon } from "react-icons/si";
+import { FaJava, FaPython } from "react-icons/fa";
+import {
+  SiAmazon,
+  SiHuggingface,
+  SiPytorch,
+  SiSpringboot,
+} from "react-icons/si";
 import ProjectCard from "../components/ProjectCard";
 import HeroSection from "../components/HeroSection";
 import { projectsData } from "../utils/data";
@@ -13,35 +18,31 @@ const HomePage: React.FC = () => {
     name: "Adama Sorho",
     title: "Software Engineer",
     subtitle:
-      "Specializing in Java, Python, Spring Boot, React, AWS, and Angular with a passion for building scalable solutions",
+      "Building scalable backend systems, cloud-native applications, and production-oriented AI/ML solutions",
     summary:
-      "Experienced Software Engineer with 7+ years of hands-on experience in designing scalable, high-performance software solutions across finance, e-commerce, and government sectors. Proven expertise in developing RESTful APIs and microservices, optimizing database performance, and deploying cloud-native (AWS) applications. Strong proficiency in Java, Spring Boot, Angular, and cloud platforms, with a deep commitment to code quality and agile delivery.",
-    yearsExperience: 7,
+      "Software Engineer with 5+ years of experience building scalable, high-performance distributed systems and cloud-native applications. I specialize in backend engineering with Java, Spring Boot, Python, and FastAPI, and I recently expanded into applied AI with computer vision, PyTorch model optimization, and Hugging Face deployment workflows.",
+    yearsExperience: 5,
     email: "adamasorho36@gmail.com",
+    resumeUrl: "/AdamaSorhoResume.pdf",
     skills: [
       { name: "Java", icon: <FaJava className="h-6 w-6" />, level: 90 },
-      { name: "Python", icon: <FaPython className="h-6 w-6" />, level: 85 },
+      { name: "Python", icon: <FaPython className="h-6 w-6" />, level: 95 },
       {
         name: "Spring Boot",
         icon: <SiSpringboot className="h-6 w-6" />,
         level: 90,
       },
-      { name: "AWS", icon: <SiAmazon className="h-6 w-6" />, level: 80 },
+      { name: "AWS", icon: <SiAmazon className="h-6 w-6" />, level: 90 },
       {
-        name: "Databases",
-        icon: <FaDatabase className="h-6 w-6" />,
-        level: 85,
+        name: "PyTorch",
+        icon: <SiPytorch className="h-6 w-6" />,
+        level: 90,
       },
       {
-        name: "React",
-        icon: <FaReact className="h-6 w-6" />,
+        name: "Hugging Face",
+        icon: <SiHuggingface className="h-6 w-6" />,
         level: 85,
       },
-      // {
-      //   name: "Machine Learning",
-      //   icon: <FaBrain className="h-6 w-6" />,
-      //   level: 75,
-      // },
     ],
   };
 
@@ -53,6 +54,7 @@ const HomePage: React.FC = () => {
         title={userData.title}
         subtitle={userData.subtitle}
         email={userData.email}
+        resumeUrl={userData.resumeUrl}
       />
 
       {/* Brief About Me */}

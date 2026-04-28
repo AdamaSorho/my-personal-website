@@ -8,6 +8,7 @@ interface HeroSectionProps {
   title: string;
   subtitle: string;
   email: string;
+  resumeUrl?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -15,6 +16,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   subtitle,
   email,
+  resumeUrl,
 }) => {
   return (
     <section className="bg-gradient-to-r from-blue-700 to-indigo-900 py-20 text-white">
@@ -24,7 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <h1 className="mb-4 text-4xl font-bold md:text-5xl">{name}</h1>
             <h2 className="mb-6 text-2xl font-light md:text-3xl">{title}</h2>
             <p className="mb-8 text-xl">{subtitle}</p>
-            <div className="flex justify-center gap-4 md:justify-start">
+            <div className="flex flex-wrap justify-center gap-4 md:justify-start">
               <Button
                 as={Link}
                 to={"/projects"}
@@ -33,6 +35,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               >
                 View My Work
               </Button>
+              {resumeUrl && (
+                <Button
+                  as="a"
+                  href={resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  color="light"
+                  size="lg"
+                >
+                  Download Resume
+                </Button>
+              )}
               <Button as={Link} to={`mailto:${email}`} color="light" size="lg">
                 Contact Me
               </Button>

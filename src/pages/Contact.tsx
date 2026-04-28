@@ -274,7 +274,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Location</h3>
-                  <p className="text-gray-600">Austin, Texas, 78729, USA</p>
+                  <p className="text-gray-600">Austin, TX</p>
                 </div>
               </div>
 

@@ -34,10 +34,10 @@ const ExperiencePage: React.FC = () => {
             Skills Overview
           </h2>
           <p className="mb-8 text-lg text-gray-600">
-            Throughout my career, I've developed expertise in various
-            technologies and methodologies. From backend development with Java
-            and Spring Boot to cloud infrastructure with AWS. I've honed my
-            skills in Agile practices, code quality, and continuous learning.
+            My experience spans backend engineering with Java, Spring Boot,
+            Python, and FastAPI; distributed systems with Kafka and Redis;
+            cloud-native delivery on AWS; and applied AI work with PyTorch,
+            Hugging Face, and computer vision.
           </p>
           <Button href="/skills" color="blue">
             Explore My Full Skill Set

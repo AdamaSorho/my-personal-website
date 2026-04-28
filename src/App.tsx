@@ -15,7 +15,7 @@ function App() {
     email: "adamasorho36@gmail.com",
     phone: "641-233-9473",
     linkedinUrl: "https://www.linkedin.com/in/adamasorho/",
-    location: "Austin, Texas",
+    location: "Austin, TX",
     avatarUrl: "images/adama.png", // Optional
   };
 
